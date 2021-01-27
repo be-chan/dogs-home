@@ -1,0 +1,16 @@
+<header class='top-page-header'>
+  <div class='search-bar-contents'>
+    <%= link_to image_tag("dog_logo1.png", class: "dog-icon"), "/" %> 
+    <h1 class='header-title'> 
+      犬の里親募集
+    </h1>
+  </div>
+  <div class='nav'>
+    <%# devise導入時,ログイン有無で表示を分岐%>
+    <ul class='header-list'>
+      <li><%= link_to '会員登録', "#", class: "sign-up" %></li>
+      <li><%= link_to 'ログイン', "#", class: "login" %></li>
+    </ul>
+    <%# //devise導入時,ログイン有無で表示を分岐%>
+  </div>
+</header>

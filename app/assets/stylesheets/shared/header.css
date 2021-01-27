@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  font-family: arial unicode ms;
+}
+
+.top-page-header {
+  height: 100px;
+  display: flex;
+  background-color: #ede971;
+  justify-content: space-around;
+}
+.search-bar-contents {
+  display: flex;
+  align-items: center;
+}
+
+.dog-icon {
+  height: 80px;
+  width: 80px;
+}
+
+.header-title {
+  font-size: 30px;
+  
+}
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+
+.header-list {
+  display: flex;
+}
+
+.sign-up {
+  text-decoration: none;
+  margin-right: 3vw;
+  background-color:#d61b1b;
+  padding: 15px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.login {  
+  text-decoration: none;
+  background-color:#d61b1b;
+  padding: 15px;
+  border-radius: 5px;
+  color: #fff;
+}
