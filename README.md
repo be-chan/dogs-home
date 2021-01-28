@@ -19,8 +19,8 @@
 
 ### Association
 - has_many :dogs
-- has_many :application_recodes
-- has_many :application_lists
+- has_many :inquiry_records
+- has_many :inquiry_lists
 
 ## dogs テーブル 
 | Column             | Type       | Option              |
@@ -39,10 +39,11 @@
 
 ### Association
 - belongs_to :user
-- has_many :application_recodes
-- has_many :application_forms
+- has_one :inquiry_record
+- has_many :inquiry_forms
+- has_many :inquiry_lists
 
-## application_recodes テーブル
+## inquiry_records テーブル
 | Column             | Type       | Option                 |
 | user               | references | foreign_key: true      |
 | dog                | references | foreign_key: true      |
@@ -50,27 +51,30 @@
 ### Association
 - belongs_to :user
 - belongs_to :dog
-- has_one :application_form
+- has_one :inquiry_form
 
-## application_forms テーブル
+## inquiry_forms テーブル
 | Column             | Type       | Option                 |
 |--------------------|------------|------------------------|
-| experience         | string     | NOT NULL               |
-| care_take          | integer    | NOT NULL               |
-| hope               | integer    | NOT NULL               |
-| application_recode | references | foreign_key: true      |
+| experience         | integer    | NOT NULL               |
+| care_take          | string     | NOT NULL               |
+| hope               | string     | NOT NULL               |
+| inquiry_record     | references | foreign_key: true      |
+| dog                | references | foreign_key: true      |
 
 ### Association
-- belongs_to :application_recode
+- belongs_to :inquiry_record
 - belongs_to :dog
-- has_many :application_lists
+- has_one :inquiry_list
 
-## application_lists テーブル
+## inquiry_lists テーブル
 | Column           | Type       | Option                 |
 |------------------|------------|------------------------|
 | user             | references | foreign_key            |
-| application_form | references | foreign_key            |
+| dog              | references | foreign_key            |
+| inquiry_form     | references | foreign_key            |
 
 ### Association
 - belongs_to :user
-- belongs_to :application_form
+- belongs_to :inquiry_form
+- belongs_to :dog
