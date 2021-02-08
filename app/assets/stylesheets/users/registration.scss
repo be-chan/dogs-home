@@ -1,0 +1,100 @@
+$cRed: #d61b1b;
+$cWhite: #fff;
+* {
+  font-family: arial unicode ms;
+}
+
+.registration-main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-image: url("/images/dog_background1.jpg");
+  background-size: cover;
+}
+
+.form-wrap {
+  width: 60%; 
+  padding-bottom: 50px;
+  background-color: $cWhite;
+  opacity: 0.9;
+}
+
+.form-header {
+  width: 100%;
+  height: 70px;
+  font-size: 22px;
+  border-bottom: 3px solid $cRed;
+  text-align: center;
+}
+
+.form-header-text {
+  line-height: 70px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+
+.form-text-wrap {
+  padding-left: 20%;
+}
+
+.form-text {
+  font-size: 12px;
+}
+
+.input-default {
+  width: 60%;
+  height: 40px;
+  margin: 0 auto;
+}
+
+.info-text {
+  font-size: 15px;
+  margin-top: 3px;
+  padding-left: 20%;
+}
+
+.indispensable {
+  background-color: $cRed;
+  color: $cWhite;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.error-text-message {
+  color: $cRed;
+  font-size: 14px;
+}
+
+.select-box {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.register-btn {
+  width: 20%;
+  margin: 0 auto;
+}
+
+.register-red-btn {
+  width: 100%;
+  background: $cRed;
+  border: 1px solid $cRed;
+  color: #fff;
+  line-height: 36px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-top: 30px;
+  transition: all 0.3s;
+  &:hover {
+     background-color: $cWhite;
+     color: $cRed;
+  }
+}
+

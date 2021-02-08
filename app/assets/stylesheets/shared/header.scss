@@ -1,0 +1,92 @@
+$cRed: #d61b1b;
+$cWhite: #fff;
+
+* {
+  box-sizing: border-box;
+  font-family: arial unicode ms;
+}
+
+.top-page-header {
+  height: 100px;
+  display: flex;
+  background-color: #f2efe6;
+  justify-content: space-around;
+}
+.search-bar-contents {
+  display: flex;
+  align-items: center;
+}
+
+.dog-icon {
+  height: 80px;
+  width: 80px;
+}
+
+.header-title {
+  font-size: 30px;
+  
+}
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+
+.header-list {
+  display: flex;
+}
+
+.my-page {
+  text-decoration: none;
+  margin-right: 3vw;
+  background-color:$cRed;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid $cRed;
+  color:$cWhite;
+  &:hover {
+    background-color: $cWhite;
+    color: $cRed;
+ }
+}
+
+.logout {
+  text-decoration: none;
+  background-color:$cRed;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid $cRed;
+  color:$cWhite;
+  &:hover {
+    background-color: $cWhite;
+    color: $cRed;
+ }
+}
+
+.sign-up {
+  text-decoration: none;
+  margin-right: 3vw;
+  background-color:$cRed;
+  padding: 15px;
+  border-radius: 5px;
+  color:$cWhite;
+  border: 1px solid $cRed;
+  transition: all 0.3s;
+  &:hover {
+     background-color: $cWhite;
+     color: $cRed;
+  }
+}
+
+.login {  
+  text-decoration: none;
+  background-color:$cRed;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid $cRed;
+  color:$cWhite;
+  &:hover {
+    background-color: $cWhite;
+    color: $cRed;
+ }
+}

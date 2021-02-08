@@ -1,0 +1,109 @@
+* {
+  font-family: arial unicode ms;
+}
+
+.registration-main {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url("/images/dog_background1.jpg");
+  background-size: cover;
+}
+
+.form-wrap {
+  width: 60%;
+  padding-bottom: 50px;
+  background-color: #fff;
+  opacity: 0.9;
+}
+
+.form-header {
+  width: 100%;
+  height: 70px;
+  font-size: 22px;
+  border-bottom: 3px solid #d61b1b;
+  text-align: center;
+}
+
+.form-header-text {
+  line-height: 70px;
+}
+
+.form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+
+.form-text-wrap {
+  padding-left: 20%;
+}
+
+.form-text {
+  font-size: 12px;
+}
+
+.input-default {
+  width: 60%;
+  height: 40px;
+  margin: 0 auto;
+}
+
+.info-text {
+  font-size: 15px;
+  margin-top: 3px;
+  padding-left: 20%;
+}
+
+.indispensable {
+  background-color: #d61b1b;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.error-text-message {
+  color: #d61b1b;
+  font-size: 14px;
+}
+
+.select-box {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.register-btn {
+  width: 20%;
+  margin: 0 auto;
+}
+
+.register-red-btn {
+  width: 100%;
+  background: #d61b1b;
+  border: 1px solid #d61b1b;
+  color: #fff;
+  line-height: 36px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-top: 30px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.register-red-btn:hover {
+  background-color: #fff;
+  color: #d61b1b;
+}
+/*# sourceMappingURL=registration.css.map */

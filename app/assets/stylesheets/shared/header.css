@@ -1,17 +1,26 @@
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: arial unicode ms;
 }
 
 .top-page-header {
   height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  background-color: #ede971;
-  justify-content: space-around;
+  background-color: #f2efe6;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
+
 .search-bar-contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .dog-icon {
@@ -21,31 +30,80 @@
 
 .header-title {
   font-size: 30px;
-  
-}
-.nav {
-  display: flex;
-  align-items: center;
 }
 
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 
 .header-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+}
+
+.my-page {
+  text-decoration: none;
+  margin-right: 3vw;
+  background-color: #d61b1b;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #d61b1b;
+  color: #fff;
+}
+
+.my-page:hover {
+  background-color: #fff;
+  color: #d61b1b;
+}
+
+.logout {
+  text-decoration: none;
+  background-color: #d61b1b;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #d61b1b;
+  color: #fff;
+}
+
+.logout:hover {
+  background-color: #fff;
+  color: #d61b1b;
 }
 
 .sign-up {
   text-decoration: none;
   margin-right: 3vw;
-  background-color:#d61b1b;
+  background-color: #d61b1b;
   padding: 15px;
   border-radius: 5px;
+  color: #fff;
+  border: 1px solid #d61b1b;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.sign-up:hover {
+  background-color: #fff;
+  color: #d61b1b;
+}
+
+.login {
+  text-decoration: none;
+  background-color: #d61b1b;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #d61b1b;
   color: #fff;
 }
 
-.login {  
-  text-decoration: none;
-  background-color:#d61b1b;
-  padding: 15px;
-  border-radius: 5px;
-  color: #fff;
+.login:hover {
+  background-color: #fff;
+  color: #d61b1b;
 }
+/*# sourceMappingURL=header.css.map */
