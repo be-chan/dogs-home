@@ -1,0 +1,24 @@
+<footer>
+  <div class='top-page-footer'>
+    <div class='footer-left'>
+      <%= link_to 'TOPへ戻る', root_path, class: "top-page"%>
+    </div>
+    <div class='footer-right'>
+      <%= image_tag "dog_logo3.png", class: "dog-icon-foot"%>
+      <ul class='footer-list'>
+        <% if user_signed_in? %>
+          <li><%= link_to 'マイページ', "#", class: "footer-my-page" %></li>
+          <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "footer-logout" %></li>
+        <% else %>
+          <li><%= link_to '会員登録', new_user_registration_path, class: "footer-sign-up" %></li>
+          <li><%= link_to 'ログイン', new_user_session_path, class: "footer-login" %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <div class='copy-right'>
+    <p class='copy-right-text'>
+      Copyright(C) 2021 dogs-home Co Ltd All Right Reserved.
+    </p>
+  </div>
+</footer>

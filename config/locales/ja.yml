@@ -1,0 +1,21 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+    attributes:
+      user:
+        nickname: ニックネーム
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: 確認用パスワード
+        full_name: お名前
+        full_name_kana: フリガナ
+        postal_code: 郵便番号
+        prefecture_id: 都道府県
+        city: 市区町村
+        address: 番地
+        building_name: 建物名
+        phone_number: 電話番号
+        job_id: 職業
+        age_id: 年齢
+        gender_id: 性別

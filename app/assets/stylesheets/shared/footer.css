@@ -1,0 +1,124 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: arial unicode ms;
+}
+
+.top-page-footer {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #f2efe6;
+}
+
+.top-page {
+  text-decoration: none;
+}
+
+.footer-left {
+  margin-left: 10%;
+}
+
+.footer-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10%;
+}
+
+.dog-icon-foot {
+  height: 80px;
+  width: 80px;
+}
+
+.footer-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer-my-page {
+  text-decoration: none;
+  font-size: 12px;
+  margin-right: 3vw;
+  background-color: #d61b1b;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #d61b1b;
+  color: #fff;
+}
+
+.footer-my-page:hover {
+  background-color: #fff;
+  color: #d61b1b;
+}
+
+.footer-logout {
+  text-decoration: none;
+  font-size: 12px;
+  background-color: #d61b1b;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #d61b1b;
+  color: #fff;
+}
+
+.footer-logout:hover {
+  background-color: #fff;
+  color: #d61b1b;
+}
+
+.footer-sign-up {
+  text-decoration: none;
+  font-size: 12px;
+  margin-right: 3vw;
+  background-color: #d61b1b;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  border: 1px solid #d61b1b;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.footer-sign-up:hover {
+  background-color: #fff;
+  color: #d61b1b;
+}
+
+.footer-login {
+  text-decoration: none;
+  font-size: 12px;
+  background-color: #d61b1b;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #d61b1b;
+  color: #fff;
+}
+
+.footer-login:hover {
+  background-color: #fff;
+  color: #d61b1b;
+}
+
+.copy-right {
+  height: 30px;
+  background-color: #313333;
+}
+
+.copy-right-text {
+  text-align: center;
+  color: #fff;
+  line-height: 30px;
+}
+/*# sourceMappingURL=footer.css.map */

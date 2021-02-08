@@ -1,0 +1,108 @@
+$cRed: #d61b1b;
+$cWhite: #fff;
+
+* {
+  box-sizing: border-box;
+  font-family: arial unicode ms;
+}
+
+.top-page-footer {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f2efe6;
+}
+
+.top-page {
+  text-decoration: none;
+}
+
+.footer-left {
+  margin-left: 10%;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  margin-right: 10%;
+}
+
+.dog-icon-foot {
+  height: 80px;
+  width: 80px;
+}
+
+.footer-list {
+  display: flex;
+}
+
+.footer-my-page {
+  text-decoration: none;
+  font-size: 12px;
+  margin-right: 3vw;
+  background-color:$cRed;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid $cRed;
+  color:$cWhite;
+  &:hover {
+    background-color: $cWhite;
+    color: $cRed;
+ }
+}
+
+.footer-logout {
+  text-decoration: none;
+  font-size: 12px;
+  background-color:$cRed;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid $cRed;
+  color:$cWhite;
+  &:hover {
+    background-color: $cWhite;
+    color: $cRed;
+ }
+}
+
+.footer-sign-up {
+  text-decoration: none;
+  font-size: 12px;
+  margin-right: 3vw;
+  background-color:$cRed;
+  padding: 10px;
+  border-radius: 5px;
+  color:$cWhite;
+  border: 1px solid $cRed;
+  transition: all 0.3s;
+  &:hover {
+     background-color: $cWhite;
+     color: $cRed;
+  }
+}
+
+.footer-login {  
+  text-decoration: none;
+  font-size: 12px;
+  background-color:$cRed;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid $cRed;
+  color:$cWhite;
+  &:hover {
+    background-color: $cWhite;
+    color: $cRed;
+ }
+}
+
+.copy-right {
+  height: 30px;
+  background-color: #313333;
+}
+
+.copy-right-text {
+  text-align: center;
+  color: $cWhite;
+  line-height: 30px;
+}

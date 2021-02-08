@@ -1,0 +1,41 @@
+<%= render 'shared/header'%>
+<div class='mypage-main'>
+  <div class='mypage-box'>
+    <div class='form-header'>
+      <h1 class='form-header-text'>
+        プロフィール
+      </h1>
+    </div>
+    <table class='mypage-detail'>
+      <tbody>
+        <tr>
+          <th class='mypage-user'>ニックネーム</th>
+          <td class='mypage-value'><%= @user.nickname %></td>
+        </tr>
+        <tr>
+          <th class='mypage-user'>年齢</th>
+          <td class='mypage-value'><%= @user.age.name %></td>
+        </tr>
+        <tr>
+          <th class='mypage-user'>性別</th>
+          <td class='mypage-value'><%= @user.gender.name %></td>
+        </tr>
+        <tr>
+          <th class='mypage-user'>所在県</th>
+          <td class='mypage-value'><%= @user.prefecture.name %></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class='mypage-btn'>
+    <% if user_signed_in? %>
+      <% if current_user.id == @user.id %>
+        <%= link_to "編集", edit_user_registration_path ,class: "mypage-red-btn"%>
+        <%= link_to "退会", user_path(@user.id) ,method: :delete, data:{ confirm: "本当に退会しますか？"},class: "mypage-red-btn"%>
+      <% end %>
+    <% end %>
+    </div>
+  </div>
+</div>
+
+
+<%= render 'shared/footer'%>
