@@ -17,8 +17,7 @@ $cWhite: #fff;
 }
 
 .mypage-detail {
-  margin: 30px 15px;
-  // background-color: pink;
+  margin: 30px auto;
 }
 
 .mypage-user {
@@ -46,12 +45,12 @@ $cWhite: #fff;
 }
 
 .mypage-red-btn {
-  padding: 10px 20px;
+  padding: 8px 10px;
   text-decoration: none;
   background: $cRed;
   border: 1px solid $cRed;
   color: #fff;
-  font-size: 20px;
+  font-size: 12px;
   cursor: pointer;
   border-radius: 3px;
   transition: all 0.3s;
