@@ -4,6 +4,7 @@
 
 .dog-detail-table {
   margin: 30px auto;
+  width: 70%;
 }
 
 .dogpage-detail {
@@ -19,6 +20,7 @@
   width: 35%;
   font-size: 14px;
   padding: 10px;
+  word-break: break-all;
 }
 
 .dogpage-img-content {
