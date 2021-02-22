@@ -1,0 +1,166 @@
+<%= render 'shared/header' %>
+
+<%= form_with model: @dog, url: dog_path(@dog.id) ,class: 'registration-main', local: true do |f| %>
+  <div class='form-wrap'>
+    <div class='form-header'>
+      <h1 class='form-header-text'> 
+        わんちゃんの情報編集
+      </h1>
+    </div>
+
+    <div class='form-group'>
+      <div class='form-text-wrap'>
+        <label class="form-text">画像</label>
+        <span class="indispensable">必須</span>
+        <p class='error-text-message'>
+        <% if @dog.errors.include?(:image) %>
+          <%= @dog.errors.full_messages_for(:image).first %>
+        <% end %>
+        </p>
+      </div>
+      <div class="image-upload">
+        <%= f.file_field :image, id: "dog-image" %>
+      </div>
+    </div>
+    <div class='form-group'>
+      <div class='form-text-wrap'>
+        <label class="form-text">掲載タイトル</label>
+        <span class="indispensable">必須</span>
+        <p class='error-text-message'>
+        <% if @dog.errors.include?(:title) %>
+          <%= @dog.errors.full_messages_for(:title).first %>
+        <% end %>
+        </p>
+      </div>
+      <%= f.text_field :title, class: "input-default", id: "title", placeholder: "40文字以内", maxlength: "40" %>
+    </div>
+    <div class='form-group'>
+      <div class='form-text-wrap'>
+        <label class="form-text">性別</label>
+        <span class="indispensable">必須</span>
+        <p class='error-text-message'>
+        <% if @dog.errors.include?(:dog_gender) %>
+          <%= @dog.errors.full_messages_for(:dog_gender).first %>
+        <% end %>
+        </p>
+      </div>
+      <div class='radio-inline-box'>
+        <div class='radio-inline'>
+          <%= f.radio_button :dog_gender, :オス, class: "dog-radio-btn" %>
+          <%= f.label :オス %>
+        </div>
+        <div class='radio-inline'>
+          <%= f.radio_button :dog_gender, :メス, class: "dog-radio-btn" %>
+          <%= f.label :メス %>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">年齢</label>
+        <span class="indispensable">必須</span>
+        <p class='error-text-message'>
+          <% if @dog.errors.include?(:dog_age_id) %>
+            <%= @dog.errors.full_messages_for(:dog_age_id).first %>
+          <% end %>
+        </p>
+      </div>
+      <%= f.collection_select(:dog_age_id, DogAge.all, :id, :name, {}, {class:"select-box", id:"dog-age"}) %>
+    </div>
+    <div class='form-group'>
+      <div class='form-text-wrap'>
+        <label class="form-text">ワクチン</label>
+        <span class="indispensable">必須</span>
+        <p class='error-text-message'>
+        <% if @dog.errors.include?(:vaccine) %>
+          <%= @dog.errors.full_messages_for(:vaccine).first %>
+        <% end %>
+        </p>
+      </div>
+      <div class='radio-inline-box'>
+        <div class='radio-inline'>
+          <%= f.radio_button :vaccine, :接種済, class: "dog-radio-btn" %>
+          <%= f.label :接種済 %>
+        </div>
+        <div class='radio-inline'>
+          <%= f.radio_button :vaccine, :未接種, class: "dog-radio-btn" %>
+          <%= f.label :未接種 %>
+        </div>
+      </div>
+    </div>
+    <div class='form-group'>
+      <div class='form-text-wrap'>
+        <label class="form-text">去勢手術</label>
+        <span class="indispensable">必須</span>
+        <p class='error-text-message'>
+        <% if @dog.errors.include?(:surgery) %>
+          <%= @dog.errors.full_messages_for(:surgery).first %>
+        <% end %>
+        </p>
+      </div>
+      <div class='radio-inline-box'>
+        <div class='radio-inline'>
+          <%= f.radio_button :surgery, :手術済, class: "dog-radio-btn" %>
+          <%= f.label :手術済 %>
+        </div>
+        <div class='radio-inline'>
+          <%= f.radio_button :surgery, :未手術, class: "dog-radio-btn" %>
+          <%= f.label :未手術 %>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">動物のいる地域</label>
+        <span class="indispensable">必須</span>
+        <p class='error-text-message'>
+          <% if @dog.errors.include?(:prefecture_id) %>
+            <%= @dog.errors.full_messages_for(:prefecture_id).first %>
+          <% end %>
+        </p>
+      </div>
+      <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"prefecture"}) %>
+    </div>
+    <div class='form-group'>
+      <div class='form-text-wrap'>
+        <label class="form-text">特徴</label>
+        <span class="indispensable">必須</span>
+        <p class='error-text-message'>
+        <% if @dog.errors.include?(:feature) %>
+          <%= @dog.errors.full_messages_for(:feature).first %>
+        <% end %>
+        </p>
+      </div>
+      <%= f.text_area :feature, class: "input-default-textarea", id: "feature", placeholder: "1000文字以内", maxlength: "1000" %>
+    </div>
+    <div class='form-group'>
+      <div class='form-text-wrap'>
+        <label class="form-text">募集理由</label>
+        <span class="indispensable">必須</span>
+        <p class='error-text-message'>
+        <% if @dog.errors.include?(:reason) %>
+          <%= @dog.errors.full_messages_for(:reason).first %>
+        <% end %>
+        </p>
+      </div>
+      <%= f.text_area :reason, class: "input-default-textarea", id: "reason", placeholder: "1000文字以内", maxlength: "1000" %>
+    </div>
+    <div class='form-group'>
+      <div class='form-text-wrap'>
+        <label class="form-text">備考・その他</label>
+        <p class='error-text-message'>
+        <% if @dog.errors.include?(:remarks) %>
+          <%= @dog.errors.full_messages_for(:remarks).first %>
+        <% end %>
+        </p>
+      </div>
+      <%= f.text_area :remarks, class: "input-default-textarea", id: "remarks", placeholder: "1000文字以内", maxlength: "1000" %>
+    </div>
+
+      <div class='register-btn'>
+        <%= f.submit "掲載する", class: "register-red-btn"%>
+      </div>
+  </div>
+<% end %>
+
+<%= render 'shared/footer'%>

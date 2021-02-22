@@ -1,0 +1,24 @@
+@mixin formBox {
+  width: 60%;
+  height: 40px;
+  margin: 0 auto;
+}
+
+.radio-inline-box {
+  @include formBox;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid rgb(118,118,118);
+  border-radius: 2px;
+}
+
+.image-upload {
+  @include formBox;
+}
+
+.input-default-textarea {
+  @include formBox;
+  resize: vertical;
+}
+

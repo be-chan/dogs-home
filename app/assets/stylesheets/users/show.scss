@@ -1,5 +1,6 @@
 $cRed: #d61b1b;
 $cWhite: #fff;
+$cGreen: #31991a;
 
 .mypage-main {
   width: 100%;
@@ -25,6 +26,7 @@ $cWhite: #fff;
   width: 30%;
   font-size: 14px;
   padding: 10px;
+  background-color: #e09dc8;
 }
 
 .mypage-value {
@@ -49,7 +51,7 @@ $cWhite: #fff;
   text-decoration: none;
   background: $cRed;
   border: 1px solid $cRed;
-  color: #fff;
+  color: $cWhite;
   font-size: 12px;
   cursor: pointer;
   border-radius: 3px;
@@ -57,5 +59,26 @@ $cWhite: #fff;
   &:hover {
      background-color: $cWhite;
      color: $cRed;
+  }
+}
+
+.my-page-dog {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.mypage-green-btn {
+  text-decoration: none;
+  background-color: $cGreen;
+  border: 1px solid $cGreen;
+  color: $cWhite;
+  padding: 8px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.3s;
+  &:hover {
+     background-color: $cWhite;
+     color: $cGreen;
   }
 }
