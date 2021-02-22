@@ -1,0 +1,62 @@
+<%= render 'shared/header'%>
+<div class='mypage-main'>
+  <div class='mypage-box'>
+    <div class='form-header'>
+      <h1 class='form-header-text'>
+        <%= @dog.title %>
+      </h1>
+    </div>
+    
+    <div class='dogpage-img-content'>
+      <%= image_tag @dog.image.variant(resize: '300x300'), class: "dogpage-box-img" %>
+    </div>
+    <table class="dog-detail-table">
+      <tbody>
+        <tr>
+          <th class="dogpage-detail">掲載者</th>
+          <td class="dogpage-value"><%= @dog.user.nickname %></td>
+          <th class="dogpage-detail">動物がいる地域</th>
+          <td class="dogpage-value"><%= @dog.prefecture.name %></td>
+        </tr>
+        <tr>
+          <th class="dogpage-detail">年齢</th>
+          <td class="dogpage-value"><%= @dog.dog_age.name %></td>
+          <th class="dogpage-detail">性別</th>
+          <td class="dogpage-value"><%= @dog.dog_gender %></td>
+        </tr>
+        <tr>
+          <th class="dogpage-detail">ワクチン</th>
+          <td class="dogpage-value"><%= @dog.vaccine %></td>
+          <th class="dogpage-detail">去勢手術</th>
+          <td class="dogpage-value"><%= @dog.surgery %></td>
+        </tr>
+        <tr>
+          <th class="dogpage-detail" colspan="1">特徴</th>
+          <td class="dogpage-value" colspan="3"><%= @dog.feature %></td>
+        </tr>
+        <tr>
+          <th class="dogpage-detail" colspan="1">募集理由</th>
+          <td class="dogpage-value" colspan="3"><%= @dog.reason %></td>
+        </tr>
+        <tr>
+          <th class="dogpage-detail" colspan="1">備考・その他</th>
+          <td class="dogpage-value" colspan="3"><%= @dog.remarks %></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="mypage-btn">
+      <% if user_signed_in? %>
+        <% if current_user.id == @dog.user.id%>
+          <%= link_to '編集', edit_dog_path(@dog.id), class: "mypage-red-btn" %>
+          <%= link_to '削除', dog_path(@dog.id), method: :delete, data:{ confirm: "本当に削除しますか？"}, class: "mypage-red-btn" %>
+          <% else %>
+          <%= link_to '応募する', "#", class: "mypage-green-btn" %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+<%= render 'shared/footer'%>
+

@@ -1,4 +1,8 @@
 ja:
+  time:
+    formats:
+      default: "%Y/%m/%d %H:%M:%S"
+      short: "%Y/%m/%d"
   activerecord:
     models:
       user: ユーザー
@@ -19,3 +23,14 @@ ja:
         job_id: 職業
         age_id: 年齢
         gender_id: 性別
+      dog:
+        title: タイトル
+        dog_gender: 性別
+        dog_age_id: 推定年齢
+        vaccine: ワクチン
+        surgery: 手術
+        prefecture_id: 都道府県
+        feature: 特徴
+        reason: 募集理由
+        remarks: 備考・その他
+        image: 画像

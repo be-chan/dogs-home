@@ -2,6 +2,51 @@
 
 <div class='main-container'>
   <div class='main-background-image'>
-    
+    <div class="dog-title">
+      <h2 class="dog-title-text">
+          里親募集情報
+      </h2>
+    </div>
+    <div class="search-container">
+      <%= search_form_for @q do |f| %>
+          <%= f.label :title, "キーワード" %>
+          <%= f.search_field :title_cont, class: "search-keywords" %>
+          <%= f.label :prefecture, "募集対象地域"%>
+          <%= f.collection_select :prefecture_id_eq, @prefecture, :id, :name, include_blank: '---', class: "search-prefecture" %>
+          <%= f.submit "検索" %>
+      <% end %>
+    </div>
+    <div class="dog-contents">
+      <ul class="dog-lists">
+        <% @dogs.each do |dog| %>
+          <li class="list">
+            <%= link_to dog_path(dog.id), class: "dog-info" do %>
+            <h3 class="dog-list-title">
+              <%= dog.title %>
+            </h3>
+            <div class="dog-img-content">
+              <%= image_tag dog.image.variant(resize: '300x300'), class: "dog-img" %>
+            </div>
+            <p class="dog-gender">
+              <%= dog.dog_gender %>
+            </p>
+            <p class="dog-prefecture">
+              <%= dog.prefecture.name %>
+            </p>
+            <p class="date-update">
+              登録:
+              <%= l dog.created_at, format: :short %>
+            </p>
+            <p class="date-update">
+              更新:
+              <%= l dog.updated_at, format: :short %>
+            </p>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
   </div>
 </div>
+
+<%= render 'shared/footer'%>

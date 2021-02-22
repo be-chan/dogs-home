@@ -1,0 +1,29 @@
+.radio-inline-box {
+  width: 60%;
+  height: 40px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #767676;
+  border-radius: 2px;
+}
+
+.image-upload {
+  width: 60%;
+  height: 40px;
+  margin: 0 auto;
+}
+
+.input-default-textarea {
+  width: 60%;
+  height: 40px;
+  margin: 0 auto;
+  resize: vertical;
+}
+/*# sourceMappingURL=new.css.map */
