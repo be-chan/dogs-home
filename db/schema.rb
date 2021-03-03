@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 2021_01_27_140026) do
   end
 
   create_table "inquiry_forms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "experience", null: false
+    t.integer "experience", default: 0
     t.string "care_take", null: false
     t.string "hope", null: false
     t.bigint "inquiry_record_id"

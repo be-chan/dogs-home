@@ -41,6 +41,9 @@
               更新:
               <%= l dog.updated_at, format: :short %>
             </p>
+            <p>
+              問い合わせ数:<%= dog.inquiry_records.length %>
+            </p>
             <% end %>
           </li>
         <% end %>

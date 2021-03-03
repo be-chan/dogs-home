@@ -40,9 +40,8 @@
 
 ### Association
 - belongs_to :user
-- has_one :inquiry_record
+- has_many :inquiry_records
 - has_many :inquiry_forms
-- has_many :inquiry_lists
 
 ## inquiry_records テーブル
 | Column             | Type       | Option                 |

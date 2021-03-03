@@ -50,7 +50,7 @@
           <%= link_to '編集', edit_dog_path(@dog.id), class: "mypage-red-btn" %>
           <%= link_to '削除', dog_path(@dog.id), method: :delete, data:{ confirm: "本当に削除しますか？"}, class: "mypage-red-btn" %>
           <% else %>
-          <%= link_to '応募する', "#", class: "mypage-green-btn" %>
+          <%= link_to '応募する', new_dog_inquiry_record_path(@dog.id), class: "mypage-green-btn" %>
         <% end %>
       <% end %>
     </div>
