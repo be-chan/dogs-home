@@ -1,22 +1,22 @@
 # テーブル設計
 
 ## users テーブル 
-| Column             | Type    | Option                 |
-|--------------------|---------|------------------------|
-| nickname           | string  | NOT NULL               |
-| email              | string  | NOT NULL, unique: true |
-| encrypted_password | string  | NOT NULL               |
-| full_name          | string  | NOT NULL               |
-| full_name_kana     | string  | NOT NULL               |
-| postal_code        | string  | NOT NULL               |
-| prefecture_id      | integer | NOT NULL               |
-| city               | string  | NOT NULL               |
-| address            | string  | NOT NULL               |
-| building_name      | string  |                        |
-| phone_number       | string  | NOT NULL               |
-| job_id             | integer | NOT NULL               |
-| age_id             | integer | NOT NULL               |
-| gender_id          | integer | NOT NULL               |
+| Column             | Type    | Option                    |
+|--------------------|---------|-------------------------- |
+| nickname           | string     | NOT NULL               |
+| email              | string     | NOT NULL, unique: true |
+| encrypted_password | string     | NOT NULL               |
+| full_name          | string     | NOT NULL               |
+| full_name_kana     | string     | NOT NULL               |
+| postal_code        | string     | NOT NULL               |
+| prefecture_id      | integer    | NOT NULL               |
+| city               | string     | NOT NULL               |
+| address            | string     | NOT NULL               |
+| building_name      | string     |                        |
+| phone_number       | string     | NOT NULL               |
+| job_id             | integer    | NOT NULL               |
+| age_id             | integer    | NOT NULL               |
+| gender_id          | integer    | NOT NULL               |
 
 ### Association
 - has_many :dogs
@@ -61,10 +61,11 @@
 | hope               | string     | NOT NULL               |
 | inquiry_record     | references | foreign_key: true      |
 | dog                | references | foreign_key: true      |
+| user               | references | foreign_key: true      |
 
 ### Association
 - belongs_to :inquiry_record
-- belongs_to :dog
+<!-- - belongs_to :dog -->
 - has_one :inquiry_list
 
 ## inquiry_lists テーブル
@@ -77,4 +78,4 @@
 ### Association
 - belongs_to :user
 - belongs_to :inquiry_form
-- belongs_to :dog
+<!-- - belongs_to :dog -->

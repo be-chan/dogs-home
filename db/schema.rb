@@ -55,10 +55,12 @@ ActiveRecord::Schema.define(version: 2021_01_27_140026) do
     t.string "hope", null: false
     t.bigint "inquiry_record_id"
     t.bigint "dog_id"
+    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["dog_id"], name: "index_inquiry_forms_on_dog_id"
     t.index ["inquiry_record_id"], name: "index_inquiry_forms_on_inquiry_record_id"
+    t.index ["user_id"], name: "index_inquiry_forms_on_user_id"
   end
 
   create_table "inquiry_lists", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -109,6 +111,7 @@ ActiveRecord::Schema.define(version: 2021_01_27_140026) do
   add_foreign_key "dogs", "users"
   add_foreign_key "inquiry_forms", "dogs"
   add_foreign_key "inquiry_forms", "inquiry_records"
+  add_foreign_key "inquiry_forms", "users"
   add_foreign_key "inquiry_lists", "dogs"
   add_foreign_key "inquiry_lists", "inquiry_forms"
   add_foreign_key "inquiry_lists", "users"

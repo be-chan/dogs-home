@@ -6,6 +6,8 @@ class CreateInquiryForms < ActiveRecord::Migration[6.0]
       t.string :hope, null: false
       t.references :inquiry_record, foreign_key: true
       t.references :dog, foreign_key: true
+      t.references :user, foreign_key: true
+
       t.timestamps
     end
   end

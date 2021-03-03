@@ -13,6 +13,11 @@ RSpec.describe RecordForm, type: :model do
     end
 
     context '送信ができないとき' do
+      it 'user_idが空のときは送信できない' do
+        @record_form.user_id =''
+        @record_form.valid?
+        expect(@record_form.errors.full_messages).to include("Userを入力してください")
+      end
       it 'dog_idが空のときは送信できない' do
         @record_form.dog_id = ''
         @record_form.valid?
