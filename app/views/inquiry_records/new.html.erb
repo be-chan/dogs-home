@@ -1,0 +1,68 @@
+<%= render 'shared/header' %>
+
+<%= form_with model: @record_form, url: dog_inquiry_records_path ,class: 'registration-main', local: true do |f| %>
+  <div class='form-wrap'>
+    <div class='form-header'>
+      <h1 class='form-header-text'> 
+       応募ページ
+      </h1>
+    </div>
+
+    <div class='dogpage-img-content'>   
+      <%= image_tag @dog.image.variant(resize: '300x300'), class: "dogpage-box-img" %>
+    </div>
+
+    <div class='form-group'>
+      <div class='form-text-wrap'>
+        <label class="form-text">飼育経験</label>
+        <span class="indispensable">必須</span>
+        <p class='error-text-message'>
+        <% if @record_form.errors.include?(:experience) %>
+          <%= @record_form.errors.full_messages_for(:experience).first %>
+        <% end %>
+        </p>
+      </div>
+      <div class='radio-inline-box'>
+        <div class='radio-inline'>
+          <%= f.radio_button :experience, :有り, class: "dog-radio-btn" %>
+          <%= f.label :有り %>
+        </div>
+        <div class='radio-inline'>
+          <%= f.radio_button :experience, :無し, class: "dog-radio-btn" %>
+          <%= f.label :無し %>
+        </div>
+      </div>
+    </div>
+    <div class='form-group'>
+      <div class='form-text-wrap'>
+        <label class="form-text">留守番の平均時間とその理由</label>
+        <span class="indispensable">必須</span>
+        <p class='error-text-message'>
+        <% if @record_form.errors.include?(:care_take) %>
+          <%= @record_form.errors.full_messages_for(:care_take).first %>
+        <% end %>
+        </p>
+      </div>
+      <%= f.text_area :care_take, class: "input-default-textarea", id: "care-take", placeholder: "1000文字以内", maxlength: "1000" %>
+    </div>
+    <div class='form-group'>
+      <div class='form-text-wrap'>
+        <label class="form-text">里親希望動機</label>
+        <span class="indispensable">必須</span>
+        <p class='error-text-message'>
+        <% if @record_form.errors.include?(:hope) %>
+          <%= @record_form.errors.full_messages_for(:hope).first %>
+        <% end %>
+        </p>
+      </div>
+      <%= f.text_area :hope, class: "input-default-textarea", id: "hope", placeholder: "1000文字以内", maxlength: "1000" %>
+    </div>
+    
+
+      <div class='register-btn'>
+        <%= f.submit "申し込み", class: "register-red-btn"%>
+      </div>
+  </div>
+<% end %>
+
+<%= render 'shared/footer'%>
