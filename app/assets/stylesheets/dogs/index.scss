@@ -21,10 +21,12 @@ $sp: 480px;
   }
 }
 
+
 .main-container {
   width: 100%;
   min-width: 1100px; //一旦つけとく
   height: 100%;
+  min-height: 610px; //一旦つけとく
   display: flex;
   justify-content: center;
   background-image: url("/images/dog_background1.jpg");

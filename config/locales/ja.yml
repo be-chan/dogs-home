@@ -34,3 +34,9 @@ ja:
         reason: 募集理由
         remarks: 備考・その他
         image: 画像
+  activemodel:
+    attributes:  
+      record_form:
+        experience: 飼育経験
+        care_take: 留守番の平均時間とその理由
+        hope: 里親希望動機
